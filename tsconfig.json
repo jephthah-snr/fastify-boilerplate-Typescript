@@ -1,0 +1,23 @@
+{
+  "extends": "fastify-tsconfig",
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "resolveJsonModule": true,
+    "rootDir": "./",
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "baseUrl": "./",
+    "paths": {
+      "@*": ["src/*"],
+      "@helpers": ["src/helpers"],
+      "@configurations": ["src/configurations/*"],
+      "@controllers/*": ["src/controllers/*"],
+      "@services/*": ["src/services/*"],
+      "@middlewares/*": ["src/middlewares/*"],
+      "@interfaces/*": ["src/interfaces/*"]
+      // add more paths heres
+    }
+  },
+  "include": ["src/**/*.ts", "src/knexfile.ts"]
+}
